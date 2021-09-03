@@ -1,8 +1,7 @@
 export default {
-  github: 'https://github.com/shuding/nextra',
-  docsRepositoryBase:
-    'https://github.com/shuding/nextra/tree/core/examples/docs/pages',
-  titleSuffix: ' – Nextra',
+  github: 'https://github.com/acall-inc/acall-react',
+  docsRepositoryBase: 'https://github.com/acall-inc/acall-react',
+  titleSuffix: ' – ACALL React',
   logo: (
     <>
       <span className="font-extrabold">Nextra</span>
@@ -27,17 +26,16 @@ export default {
   ),
   search: true,
   unstable_stork: false,
-  unstable_faviconGlyph: '👋',
+  unstable_faviconGlyph: '🅰️',
   prevLinks: true,
   nextLinks: true,
   floatTOC: true,
   footer: true,
   footerEditLink: ({ locale }) =>
-    locale === 'zh' ? '前往 GitHub 编辑此页' : 'Edit this page on GitHub',
+    locale === 'ja' ? 'GitHubで編集' : 'Edit this page on GitHub',
   footerText: <>MIT {new Date().getFullYear()} © Shu Ding.</>,
   i18n: [
     { locale: 'en', text: 'English' },
-    { locale: 'zh', text: '简体中文' },
-    { locale: 'ar', text: 'العربية', direction: 'rtl' }
+    { locale: 'ja', text: '日本語' }
   ]
 }

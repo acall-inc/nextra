@@ -20,7 +20,16 @@ export default ({ children, type = 'default', emoji = '💡' }) => {
       >
         {emoji}
       </div>
-      <div className="pr-4 py-2">{children}</div>
+      <div className="py-2 pr-4">{children}</div>
+      <style jsx>{`
+        .prose p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .prose p strong {
+          color: inherit;
+        }
+      `}</style>
     </div>
   )
 }
