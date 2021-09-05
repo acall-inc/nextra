@@ -14,7 +14,7 @@ export default function ThemeSwitch() {
 
   return (
     <a
-      className="text-current p-2 cursor-pointer"
+      className="text-black dark:text-white p-2 cursor-pointer"
       tabIndex="0"
       onClick={toggleTheme}
       onKeyDown={e => {

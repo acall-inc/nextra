@@ -2,7 +2,12 @@ import React from 'react'
 
 export default ({ height = 40 }) => {
   return (
-    <svg height={height} viewBox="2 2 20 20" fill="none">
+    <svg
+      height={height}
+      viewBox="2 2 20 20"
+      fill="none"
+      className="text-black dark:text-white"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

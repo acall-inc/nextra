@@ -12,7 +12,7 @@ export default function LocaleSwitch({ options, isRTL }) {
   return (
     <details className="locale-switch relative">
       <summary
-        className="text-current p-2 cursor-pointer outline-none"
+        className="p-2 text-black outline-none cursor-pointer dark:text-white"
         tabIndex="0"
       >
         <svg
@@ -30,7 +30,7 @@ export default function LocaleSwitch({ options, isRTL }) {
           />
         </svg>
       </summary>
-      {mounted ?
+      {mounted ? (
         <ul
           className={cn(
             'locale-dropdown absolute block bg-white dark:bg-dark border dark:border-gray-700 py-1 rounded shadow-lg',
@@ -42,7 +42,7 @@ export default function LocaleSwitch({ options, isRTL }) {
               <Link href={asPath} locale={l.locale}>
                 <a
                   className={cn(
-                    'block no-underline text-current py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-800 whitespace-nowrap',
+                    'block no-underline text-black dark:text-white py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-800 whitespace-nowrap',
                     {
                       'font-semibold': locale === l.locale,
                       'bg-gray-100 dark:bg-gray-900': locale === l.locale
@@ -54,9 +54,8 @@ export default function LocaleSwitch({ options, isRTL }) {
               </Link>
             </li>
           ))}
-        </ul> :
-        null
-      }
+        </ul>
+      ) : null}
     </details>
   )
 }
