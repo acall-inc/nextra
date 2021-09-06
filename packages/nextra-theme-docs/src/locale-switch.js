@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import useMounted from './utils/use-mounted'
 
 const themedCta =
-  'focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black focus:ring-sky-500 rounded-md'
+  'focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-md'
 
 export default function LocaleSwitch({ options, isRTL }) {
   const { locale, asPath } = useRouter()

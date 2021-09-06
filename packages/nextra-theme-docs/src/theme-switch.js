@@ -5,28 +5,26 @@ import { useTheme } from 'next-themes'
 import useMounted from './utils/use-mounted'
 
 const themedCta =
-  'focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black focus:ring-sky-500 rounded-md'
+  'focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-md'
 
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme()
   const mounted = useMounted()
 
-  // @TODO: system theme
+  /*
+   * TODO: support system theme
+   */
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
-    <a
+    <button
       className={clsx(
         themedCta,
         'text-black dark:text-white p-2 cursor-pointer'
       )}
-      tabIndex="0"
       onClick={toggleTheme}
-      onKeyDown={e => {
-        if (e.key === 'Enter') toggleTheme()
-      }}
     >
       {mounted && theme === 'dark' ? (
         <svg
@@ -72,6 +70,6 @@ export default function ThemeSwitch() {
           shapeRendering="geometricPrecision"
         ></svg>
       )}
-    </a>
+    </button>
   )
 }

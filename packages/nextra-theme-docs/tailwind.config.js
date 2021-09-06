@@ -13,6 +13,9 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),
+            '&:first-child': {
+              marginTop: spacing[2]
+            },
             a: {
               color: theme('colors.blue.500'),
               '&:hover': {
@@ -25,7 +28,7 @@ module.exports = {
             },
             code: {
               color: theme('colors.pink.500'),
-              backgroundColor: theme('colors.gray.100')
+              backgroundColor: theme('colors.gray.50')
             },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false
