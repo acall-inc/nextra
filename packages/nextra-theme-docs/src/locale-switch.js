@@ -1,9 +1,12 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import cn from 'classnames'
+import clsx from 'clsx'
 
 import useMounted from './utils/use-mounted'
+
+const themedCta =
+  'focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black focus:ring-sky-500 rounded-md'
 
 export default function LocaleSwitch({ options, isRTL }) {
   const { locale, asPath } = useRouter()
@@ -12,7 +15,10 @@ export default function LocaleSwitch({ options, isRTL }) {
   return (
     <details className="locale-switch relative">
       <summary
-        className="p-2 text-black outline-none cursor-pointer dark:text-white"
+        className={clsx(
+          themedCta,
+          'p-2 text-black outline-none cursor-pointer dark:text-white'
+        )}
         tabIndex="0"
       >
         <svg
@@ -32,7 +38,7 @@ export default function LocaleSwitch({ options, isRTL }) {
       </summary>
       {mounted ? (
         <ul
-          className={cn(
+          className={clsx(
             'locale-dropdown absolute block bg-white dark:bg-dark border dark:border-gray-700 py-1 rounded shadow-lg',
             { 'right-0': !isRTL, 'left-0': isRTL }
           )}
@@ -41,7 +47,7 @@ export default function LocaleSwitch({ options, isRTL }) {
             <li key={l.locale}>
               <Link href={asPath} locale={l.locale}>
                 <a
-                  className={cn(
+                  className={clsx(
                     'block no-underline text-black dark:text-white py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-800 whitespace-nowrap',
                     {
                       'font-semibold': locale === l.locale,

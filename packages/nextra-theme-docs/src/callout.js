@@ -13,7 +13,7 @@ export default ({ children, type = 'default', emoji = '💡' }) => {
   return (
     <div className={`${themes[type]} flex rounded-lg callout mt-6`}>
       <div
-        className="pl-3 pr-2 py-2 select-none text-xl"
+        className="py-2 pl-3 pr-2 text-xl select-none"
         style={{
           fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
         }}
@@ -26,7 +26,7 @@ export default ({ children, type = 'default', emoji = '💡' }) => {
           margin-top: 0;
           margin-bottom: 0;
         }
-        .prose p strong {
+        .prose p * {
           color: inherit;
         }
       `}</style>

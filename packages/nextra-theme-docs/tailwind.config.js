@@ -23,7 +23,10 @@ module.exports = {
             'h2,h3,h4': {
               'scroll-margin-top': spacing[32]
             },
-            code: { color: theme('colors.pink.500') },
+            code: {
+              color: theme('colors.pink.500'),
+              backgroundColor: theme('colors.gray.100')
+            },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false
           }
@@ -35,8 +38,11 @@ module.exports = {
               color: theme('colors.blue.400'),
               '&:hover': {
                 color: theme('colors.blue.600')
-              },
-              code: { color: theme('colors.blue.400') }
+              }
+            },
+            code: {
+              backgroundColor: theme('colors.gray.800')
+              // color: theme('colors.blue.400')
             },
             blockquote: {
               borderLeftColor: theme('colors.gray.700'),

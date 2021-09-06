@@ -10,30 +10,30 @@ body {
   @apply bg-white;
 }
 .dark body {
-  @apply bg-dark text-gray-100;
+  @apply text-gray-100 bg-dark;
 }
 
 h1 {
-  @apply text-4xl font-bold tracking-tight mt-2;
+  @apply mt-2 text-4xl font-bold tracking-tight;
 }
 h2 {
-  @apply text-3xl font-semibold tracking-tight mt-10;
+  @apply mt-10 text-3xl font-semibold tracking-tight;
   @apply pb-1 border-b;
 }
 .dark h2 {
   @apply border-gray-900;
 }
 h3 {
-  @apply text-2xl font-semibold tracking-tight mt-8;
+  @apply mt-8 text-2xl font-semibold tracking-tight;
 }
 h4 {
-  @apply text-xl font-semibold tracking-tight mt-8;
+  @apply mt-8 text-xl font-semibold tracking-tight;
 }
 h5 {
-  @apply text-lg font-semibold tracking-tight mt-8;
+  @apply mt-8 text-lg font-semibold tracking-tight;
 }
 h6 {
-  @apply text-base font-semibold tracking-tight mt-8;
+  @apply mt-8 text-base font-semibold tracking-tight;
 }
 a {
   @apply text-blue-500 underline;
@@ -54,21 +54,21 @@ hr {
   @apply border-gray-900;
 }
 code {
-  @apply text-gray-800 bg-gray-500 bg-opacity-25 rounded;
+  @apply text-gray-800 bg-gray-500 rounded bg-opacity-25;
   box-decoration-break: clone;
 }
 .dark code {
   @apply text-gray-300 bg-gray-800;
 }
 pre {
-  @apply p-4 bg-gray-200 rounded-lg mt-6 mb-4 overflow-x-auto;
+  @apply p-4 mt-6 mb-4 overflow-x-auto bg-gray-200 rounded-lg;
   @apply dark:bg-gray-800;
 }
 pre code {
-  @apply p-0 text-sm text-black bg-transparent rounded-none inline-block min-w-full;
+  @apply inline-block min-w-full p-0 text-sm text-black bg-transparent rounded-none;
 }
 a code {
-  @apply text-current no-underline;
+  @apply no-underline text-current;
 }
 
 @tailwind components;
@@ -82,7 +82,7 @@ a code {
   @apply select-none md:border-r;
 }
 .sidebar ul ul {
-  @apply ml-5 relative;
+  @apply relative ml-5;
 }
 .sidebar a:focus-visible,
 .sidebar button:focus-visible {
@@ -99,7 +99,7 @@ a code {
 }
 .sidebar button,
 .sidebar a {
-  @apply block w-full text-left text-base no-underline text-gray-600 mt-1 p-2 rounded select-none outline-none;
+  @apply block w-full p-2 mt-1 text-base text-left text-gray-600 no-underline rounded outline-none select-none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
@@ -116,16 +116,16 @@ a code {
   @apply text-white bg-gray-900;
 }
 article ul {
-  @apply list-disc ml-6 mt-6;
+  @apply mt-6 ml-6 list-disc;
 }
 article li {
   @apply mt-2;
 }
 article ol {
-  @apply list-decimal ml-6 mt-6;
+  @apply mt-6 ml-6 list-decimal;
 }
 article blockquote {
-  @apply italic pl-6 border-l-2 border-gray-300 text-gray-700;
+  @apply pl-6 italic text-gray-700 border-l-2 border-gray-300;
   @apply dark:border-gray-700 dark:text-gray-400;
 }
 
@@ -157,19 +157,19 @@ h2 a {
 }
 .nextra-container nav a:focus,
 .nextra-container nav summary:focus {
-  @apply select-none outline-none;
+  @apply outline-none select-none;
 }
 .nextra-container nav a:focus-visible,
 .nextra-container nav summary:focus-visible {
-  @apply ring select-none outline-none;
+  @apply outline-none select-none ring;
 }
 
 /* Search */
 .nextra-search input {
-  @apply border-gray-300 text-gray-900;
+  @apply text-gray-900 border-gray-300;
 }
 .dark .nextra-search input {
-  @apply bg-dark border-gray-800 text-gray-100;
+  @apply text-gray-100 border-gray-800 bg-dark;
 }
 .nextra-search input::placeholder {
   @apply text-gray-400;
@@ -178,10 +178,10 @@ h2 a {
   @apply text-gray-700;
 }
 .nextra-search ul {
-  @apply rounded border bg-white text-gray-100 border-gray-300 divide-gray-300 overflow-hidden shadow-lg list-none;
+  @apply overflow-hidden text-gray-100 list-none bg-white border border-gray-300 rounded shadow-lg divide-gray-300;
 }
 .dark .nextra-search ul {
-  @apply bg-dark text-gray-100 border-gray-700 divide-gray-700;
+  @apply text-gray-100 border-gray-700 bg-dark divide-gray-700;
 }
 .nextra-search ul li {
   @apply text-gray-800;
@@ -217,7 +217,7 @@ input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
 .nextra-search.nextra-stork ul {
-  @apply overflow-auto left-0 md:-left-80 md:right-0;
+  @apply left-0 overflow-auto md:-left-80 md:right-0;
   max-height: min(calc(100vh - 80px), 400px);
   max-width: min(calc(100vw - 2rem), calc(100% + 20rem));
   width: 100vw;
@@ -259,7 +259,7 @@ table {
   @apply p-0;
 }
 table tr {
-  @apply m-0 p-0 border-t border-gray-300;
+  @apply p-0 m-0 border-t border-gray-300;
   @apply dark:border-gray-700;
 }
 table tr:nth-child(2n) {
@@ -280,7 +280,7 @@ table tr td[align='right'] {
 table tr th,
 table tr td {
   @apply text-left;
-  @apply m-0 px-4 py-2 border border-gray-300;
+  @apply px-4 py-2 m-0 border border-gray-300;
   @apply dark:border-gray-700;
 }
 .table-container {
@@ -288,7 +288,7 @@ table tr td {
 }
 
 .contains-task-list {
-  @apply list-none ml-0;
+  @apply ml-0 list-none;
 }
 
 .contains-task-list input[type='checkbox'] {
@@ -347,14 +347,14 @@ pre .prism-code .token.tag:not(.script) {
   direction: rtl;
 }
 .nextra-container.rtl .sidebar ul ul {
-  @apply mr-5 ml-0;
+  @apply ml-0 mr-5;
 }
 .nextra-container.rtl .sidebar button,
 .nextra-container.rtl .sidebar a {
   @apply text-right;
 }
 .nextra-container.rtl article blockquote {
-  @apply pr-6 border-r-2 pl-0 border-l-0;
+  @apply pl-0 pr-6 border-l-0 border-r-2;
 }
 .nextra-container:not(.rtl):not(.page) article.docs-container {
   @apply xl:pr-8;
@@ -390,7 +390,7 @@ pre .prism-code .token.tag:not(.script) {
   direction: ltr;
 }
 .nextra-container.rtl .anchor-icon {
-  @apply ml-0 mr-2 inline-block;
+  @apply inline-block ml-0 mr-2;
 }
 .nextra-container.rtl article ul,
 .nextra-container.rtl article ol {

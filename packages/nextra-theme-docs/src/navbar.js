@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -13,7 +13,15 @@ import GitHubIcon from './github-icon'
 import ThemeSwitch from './theme-switch'
 import LocaleSwitch from './locale-switch'
 
-export default function Navbar({ config, isRTL, flatDirectories, flatPageDirectories }) {
+const themedCta =
+  'focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black focus:ring-sky-500 rounded-md'
+
+export default function Navbar({
+  config,
+  isRTL,
+  flatDirectories,
+  flatPageDirectories
+}) {
   const { locale, asPath } = useRouter()
   const activeRoute = getFSRoute(asPath, locale).split('#')[0]
   const { menu, setMenu } = useMenuContext()
@@ -22,7 +30,12 @@ export default function Navbar({ config, isRTL, flatDirectories, flatPageDirecto
     <nav className="flex items-center bg-white z-20 fixed top-0 left-0 right-0 h-16 border-b border-gray-200 px-6 dark:bg-dark dark:border-gray-900 bg-opacity-[.97] dark:bg-opacity-100">
       <div className="w-full flex items-center mr-2">
         <Link href="/">
-          <a className="no-underline text-current inline-flex items-center hover:opacity-75">
+          <a
+            className={clsx(
+              themedCta,
+              'inline-flex items-center no-underline text-current hover:opacity-75 '
+            )}
+          >
             {renderComponent(config.logo, { locale })}
           </a>
         </Link>
@@ -58,7 +71,7 @@ export default function Navbar({ config, isRTL, flatDirectories, flatPageDirecto
         : null}
 
       <div className="flex-1">
-        <div className="hidden md:inline-block mr-2">
+        <div className="hidden mr-2 md:inline-block">
           {config.customSearch ||
             (config.search ? (
               config.unstable_stork ? (
@@ -77,12 +90,16 @@ export default function Navbar({ config, isRTL, flatDirectories, flatPageDirecto
       ) : null}
 
       {config.github ? (
-        <a className="text-current p-2" href={config.github} target="_blank">
+        <a
+          className={clsx(themedCta, 'p-2 text-current')}
+          href={config.github}
+          target="_blank"
+        >
           <GitHubIcon height={24} />
         </a>
       ) : null}
 
-      <button className="block md:hidden p-2" onClick={() => setMenu(!menu)}>
+      <button className="block p-2 md:hidden" onClick={() => setMenu(!menu)}>
         <svg
           fill="none"
           width="24"

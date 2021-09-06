@@ -102,14 +102,14 @@ const Search = ({ directories = [] }) => {
   return (
     <div className="nextra-search relative w-full md:w-64">
       {renderList && (
-        <div className="search-overlay z-10" onClick={() => setShow(false)} />
+        <div className="z-10 search-overlay" onClick={() => setShow(false)} />
       )}
       <input
         onChange={e => {
           setSearch(e.target.value)
           setShow(true)
         }}
-        className="appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:ring w-full"
+        className="w-full px-3 py-2 text-sm leading-tight border rounded appearance-none focus:outline-none focus:ring-2 focus:border-sky-500 focus:ring-sky-500"
         type="search"
         placeholder='Search ("/" to focus)'
         onKeyDown={handleKeyDown}
@@ -117,7 +117,7 @@ const Search = ({ directories = [] }) => {
         ref={input}
       />
       {renderList && (
-        <ul className="shadow-md list-none p-0 m-0 absolute left-0 md:right-0 rounded mt-1 border top-100 divide-y z-20 w-full md:w-auto">
+        <ul className="absolute left-0 z-20 w-full p-0 m-0 mt-1 list-none border rounded shadow-md md:right-0 top-100 divide-y md:w-auto">
           {results.map((res, i) => {
             return (
               <Item

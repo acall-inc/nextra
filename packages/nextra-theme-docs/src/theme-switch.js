@@ -1,7 +1,11 @@
 import React from 'react'
+import clsx from 'clsx'
 import { useTheme } from 'next-themes'
 
 import useMounted from './utils/use-mounted'
+
+const themedCta =
+  'focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black focus:ring-sky-500 rounded-md'
 
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme()
@@ -14,7 +18,10 @@ export default function ThemeSwitch() {
 
   return (
     <a
-      className="text-black dark:text-white p-2 cursor-pointer"
+      className={clsx(
+        themedCta,
+        'text-black dark:text-white p-2 cursor-pointer'
+      )}
       tabIndex="0"
       onClick={toggleTheme}
       onKeyDown={e => {
