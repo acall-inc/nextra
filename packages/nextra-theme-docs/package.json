@@ -51,6 +51,6 @@
     "microbundle": "^0.12.4",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.0",
-    "tailwindcss": "^2.2.9"
+    "tailwindcss": "^2.2.10"
   }
 }
