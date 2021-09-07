@@ -1,10 +1,11 @@
 {
-  "name": "nextra-theme-docs",
+  "name": "acall-nextra-theme-docs",
   "version": "1.2.6",
-  "description": "A Nextra theme for documentation sites.",
+  "private": true,
+  "description": "A Nextra theme for ACALL's documentation sites.",
   "main": "index.js",
-  "repository": "https://github.com/shuding/nextra-theme-docs.git",
-  "author": "Shu Ding <g@shud.in>",
+  "repository": "https://github.com/acall-inc/nextra-theme-docs.git",
+  "author": "Brandon Pittman <brandon.pittman@corp.acall.jp>",
   "license": "MIT",
   "files": [
     "dist/*",
