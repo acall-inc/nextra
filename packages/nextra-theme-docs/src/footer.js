@@ -12,7 +12,7 @@ const NextLink = ({ route, title, isRTL }) => {
     <Link href={route}>
       <a
         className={cn(
-          'text-lg font-medium p-4 -m-4 no-underline text-gray-600 hover:text-blue-600 flex items-center',
+          'text-lg font-medium p-4 -m-4 no-underline text-gray-600 hover:text-sky-600 flex items-center',
           { 'ml-2': !isRTL, 'mr-2': isRTL }
         )}
         title={title}
@@ -34,7 +34,7 @@ const PrevLink = ({ route, title, isRTL }) => {
     <Link href={route}>
       <a
         className={cn(
-          'text-lg font-medium p-4 -m-4 no-underline text-gray-600 hover:text-blue-600 flex items-center',
+          'text-lg font-medium p-4 -m-4 no-underline text-gray-600 hover:text-sky-600 flex items-center',
           { 'mr-2': !isRTL, 'ml-2': isRTL }
         )}
         title={title}

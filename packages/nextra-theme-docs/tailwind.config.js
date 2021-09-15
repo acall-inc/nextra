@@ -4,6 +4,7 @@ const { sky, orange } = require('tailwindcss/colors')
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.js', './src/**/*.css'],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       sans: ['Inter', ...fontFamily.sans]
@@ -17,9 +18,8 @@ module.exports = {
               marginTop: spacing[2]
             },
             a: {
-              color: theme('colors.blue.500'),
               '&:hover': {
-                color: theme('colors.blue.700')
+                color: theme('colors.sky.700')
               },
               code: { color: theme('colors.blue.400') }
             },
@@ -38,14 +38,13 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.blue.400'),
+              color: theme('colors.sky.400'),
               '&:hover': {
-                color: theme('colors.blue.600')
+                color: theme('colors.sky.500')
               }
             },
             code: {
               backgroundColor: theme('colors.gray.800')
-              // color: theme('colors.blue.400')
             },
             blockquote: {
               borderLeftColor: theme('colors.gray.700'),
@@ -55,7 +54,7 @@ module.exports = {
               color: theme('colors.gray.100'),
               'scroll-margin-top': spacing[32]
             },
-            hr: { borderColor: theme('colors.gray.700') },
+            hr: { borderColor: theme('colors.gray.900') },
             thead: {
               color: theme('colors.gray.100')
             }
@@ -85,6 +84,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('@tailwindcss/typography')],
-  darkMode: 'class'
+  plugins: [require('@tailwindcss/typography')]
 }

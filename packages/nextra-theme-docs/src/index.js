@@ -86,7 +86,9 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
   const title =
     meta.title || (titleEl ? innerText(titleEl.props.children) : 'Untitled')
   const anchors = titles
-    .filter(child => child.props && (config.floatTOC || child.props.mdxType === 'h2'))
+    .filter(
+      child => child.props && (config.floatTOC || child.props.mdxType === 'h2')
+    )
     .map(child => child.props.children)
 
   const isRTL = useMemo(() => {
@@ -109,7 +111,7 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
           }}
         >
           <div
-            className={cn('nextra-container main-container flex flex-col', {
+            className={cn('nextra-container min-h-screen flex flex-col', {
               rtl: isRTL,
               page: true
             })}
@@ -180,7 +182,7 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
                 meta={meta}
                 config={config}
                 filepathWithName={filepathWithName}
-                toc={<ToC titles={config.floatTOC ? titles: null}/>}
+                toc={<ToC titles={config.floatTOC ? titles : null} />}
                 navLinks={
                   <NavLinks
                     flatDirectories={flatDocsDirectories}

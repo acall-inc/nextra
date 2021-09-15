@@ -301,7 +301,7 @@ export default ({ children }) => {
   slugger.index = 0
   return (
     <MDXProvider components={getComponents({ slugger })}>
-      <div className="prose dark:prose-dark">{children}</div>
+      <div className="prose prose-sky dark:prose-dark">{children}</div>
     </MDXProvider>
   )
 }
