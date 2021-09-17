@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import parseGitUrl from 'parse-git-url'
@@ -11,7 +11,7 @@ const NextLink = ({ route, title, isRTL }) => {
   return (
     <Link href={route}>
       <a
-        className={cn(
+        className={clsx(
           'text-lg font-medium p-4 -m-4 no-underline text-gray-600 hover:text-sky-600 flex items-center',
           { 'ml-2': !isRTL, 'mr-2': isRTL }
         )}
@@ -19,7 +19,7 @@ const NextLink = ({ route, title, isRTL }) => {
       >
         {title}
         <ArrowRight
-          className={cn('transform inline flex-shrink-0', {
+          className={clsx('transform inline flex-shrink-0', {
             'rotate-180 mr-1': isRTL,
             'ml-1': !isRTL
           })}
@@ -33,14 +33,14 @@ const PrevLink = ({ route, title, isRTL }) => {
   return (
     <Link href={route}>
       <a
-        className={cn(
+        className={clsx(
           'text-lg font-medium p-4 -m-4 no-underline text-gray-600 hover:text-sky-600 flex items-center',
           { 'mr-2': !isRTL, 'ml-2': isRTL }
         )}
         title={title}
       >
         <ArrowRight
-          className={cn('transform inline flex-shrink-0', {
+          className={clsx('transform inline flex-shrink-0', {
             'rotate-180 mr-1': !isRTL,
             'ml-1': isRTL
           })}

@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import clsx from 'clsx'
 import Slugger from 'github-slugger'
 import innerText from 'react-innertext'
 
@@ -38,7 +38,7 @@ export default function ToC({ titles }) {
                 <li key={slug} style={indent(item.props.mdxType)}>
                   <a
                     href={`#${slug}`}
-                    className={cn(
+                    className={clsx(
                       'no-underline hover:text-gray-900 dark:hover:text-gray-100',
                       state && state.isActive
                         ? 'text-gray-900 dark:text-gray-100 font-semibold'

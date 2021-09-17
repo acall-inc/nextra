@@ -12,6 +12,9 @@
   body {
     @apply bg-white;
   }
+  kbd {
+    @apply font-mono;
+  }
   .dark body {
     @apply text-gray-100 bg-dark;
   }

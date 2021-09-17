@@ -4,7 +4,7 @@ import 'focus-visible'
 import { SkipNavContent } from '@reach/skip-nav'
 import { ThemeProvider } from 'next-themes'
 import innerText from 'react-innertext'
-import cn from 'classnames'
+import clsx from 'clsx'
 
 import normalizePages from './utils/normalize-pages'
 
@@ -111,7 +111,7 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
           }}
         >
           <div
-            className={cn('nextra-container min-h-screen flex flex-col', {
+            className={clsx('nextra-container min-h-screen flex flex-col', {
               rtl: isRTL,
               page: true
             })}
@@ -123,7 +123,7 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
               flatPageDirectories={flatPageDirectories}
             />
             <ActiveAnchor>
-              <div className="flex flex-1 h-full">
+              <div className="flex flex-1 h-full min-h-screen">
                 <Sidebar
                   directories={flatPageDirectories}
                   flatDirectories={flatDirectories}
@@ -159,7 +159,7 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
         }}
       >
         <div
-          className={cn('nextra-container main-container flex flex-col', {
+          className={clsx('nextra-container main-container flex flex-col', {
             rtl: isRTL
           })}
         >
@@ -170,7 +170,7 @@ const Layout = ({ filename, config: _config, pageMap, meta, children }) => {
             flatPageDirectories={flatPageDirectories}
           />
           <ActiveAnchor>
-            <div className="flex flex-1 h-full">
+            <div className="flex flex-1 h-full min-h-screen">
               <Sidebar
                 directories={docsDirectories}
                 flatDirectories={flatDirectories}

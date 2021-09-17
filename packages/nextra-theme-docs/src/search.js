@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback, useRef, useState, useEffect } from 'react'
 import matchSorter from 'match-sorter'
-import cn from 'classnames'
+import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -10,7 +10,7 @@ const Item = ({ title, active, href, onMouseOver, search }) => {
   return (
     <Link href={href}>
       <a className="block no-underline" onMouseOver={onMouseOver}>
-        <li className={cn('p-2', { active })}>
+        <li className={clsx('p-2', { active })}>
           {title.substring(0, highlight)}
           <span className="highlight">
             {title.substring(highlight, highlight + search.length)}

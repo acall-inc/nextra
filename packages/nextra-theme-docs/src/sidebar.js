@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import cn from 'classnames'
+import clsx from 'clsx'
 import Slugger from 'github-slugger'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -148,7 +148,7 @@ export default function Sidebar({
 
   return (
     <aside
-      className={cn(
+      className={clsx(
         'fixed h-screen bg-white dark:bg-dark flex-shrink-0 w-full md:w-64 md:sticky z-20',
         menu ? '' : 'hidden',
         mdShow ? 'md:block' : ''

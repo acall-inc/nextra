@@ -55,7 +55,7 @@ export default function Navbar({
             return (
               <Link href={href} key={page.route}>
                 <a
-                  className={cn(
+                  className={clsx(
                     'no-underline whitespace-nowrap mr-4 hidden md:inline-block',
                     page.route === activeRoute ||
                       activeRoute.startsWith(page.route + '/')

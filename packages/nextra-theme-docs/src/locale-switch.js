@@ -49,10 +49,8 @@ export default function LocaleSwitch({ options, isRTL }) {
                 <a
                   className={clsx(
                     'block no-underline text-black dark:text-white py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-800 whitespace-nowrap',
-                    {
-                      'font-semibold': locale === l.locale,
-                      'bg-gray-100 dark:bg-gray-900': locale === l.locale
-                    }
+                    locale === l.locale &&
+                      'font-semibold bg-gray-100 dark:bg-gray-900'
                   )}
                 >
                   {l.text}

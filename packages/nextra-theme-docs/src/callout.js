@@ -26,7 +26,9 @@ export default ({ children, type = 'default', emoji = '💡' }) => {
           margin-top: 0;
           margin-bottom: 0;
         }
-        .prose p * {
+        .prose p *,
+        .prose p *:hover,
+        .prose p *:focus {
           color: inherit;
         }
       `}</style>

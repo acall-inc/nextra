@@ -6,8 +6,8 @@ import React, {
   useEffect,
   Fragment
 } from 'react'
-import Router, { useRouter } from 'next/router'
-import cn from 'classnames'
+import Router, {useRouter} from 'next/router'
+import clsx from 'clsx'
 import Link from 'next/link'
 import GraphemeSplitter from 'grapheme-splitter'
 
@@ -41,7 +41,7 @@ const Item = ({ title, active, href, onMouseOver, excerpt }) => {
   return (
     <Link href={href}>
       <a className="block no-underline" onMouseOver={onMouseOver}>
-        <li className={cn('py-2 px-4', { active })}>
+        <li className={clsx('py-2 px-4', { active })}>
           <span className="font-semibold">{title}</span>
           {excerpt ? (
             <div className="text-gray-600">
