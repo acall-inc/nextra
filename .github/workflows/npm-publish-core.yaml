@@ -23,6 +23,7 @@ jobs:
           node-version: 14
           registry-url: "https://npm.pkg.github.com"
           scope: "@acall-inc"
+      - run: cat package.json
       - run: yarn
       - name:  'Automated Version Bump'
         uses:  'phips28/gh-action-bump-version@master'  
