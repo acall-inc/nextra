@@ -6,10 +6,10 @@ module.exports = {
   purge: ['./src/**/*.js', './src/**/*.css'],
   darkMode: 'class',
   theme: {
-    fontFamily: {
-      sans: ['Inter', ...fontFamily.sans]
-    },
     extend: {
+      fontFamily: {
+        sans: ['Inter', ...fontFamily.sans]
+      },
       typography: theme => ({
         DEFAULT: {
           css: {
