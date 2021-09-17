@@ -24,7 +24,9 @@ jobs:
           scope: "@acall-inc"
       - run: yarn
       - name:  'Automated Version Bump'
-        uses:  'phips28/gh-action-bump-version@master'
+        uses:  'phips28/gh-action-bump-version@master'  
+        with:
+          target-branch: 'core'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
           PACKAGEJSON_DIR:  'packages/nextra-theme-docs'
