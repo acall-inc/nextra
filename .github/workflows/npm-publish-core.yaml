@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
           PACKAGEJSON_DIR:  'packages/nextra-theme-docs'
-      - run: yarn build
-      - run: yarn publish
+      - run: yarn build:docs
+      - run: yarn publish packages/nextra-theme-docs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
