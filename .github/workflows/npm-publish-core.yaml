@@ -1,4 +1,4 @@
-name: npm publish master
+name: npm publish core
 on:
   push:
     branches:  
