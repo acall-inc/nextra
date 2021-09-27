@@ -13,6 +13,10 @@
     "bleed.js",
     "style.css"
   ],
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "yarn dev:layout & yarn dev:tailwind",
     "build": "yarn run build:clean && yarn run build:tailwind && yarn run build:layout",
