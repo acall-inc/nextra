@@ -270,9 +270,12 @@ const Code = ({ children, className, highlight, ...props }) => {
                   : null
               }
             >
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
+              {line.map((_, key) => (
+                <span key={key} />
               ))}
+              {/*line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token, key })} />
+              ))*/}
             </div>
           ))}
         </code>
