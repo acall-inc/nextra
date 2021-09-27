@@ -33,5 +33,7 @@ jobs:
           PACKAGEJSON_DIR:  'packages/nextra-theme-docs'
       - run: yarn build:theme-docs
       - run: yarn publish packages/nextra-theme-docs
+        with:
+          target-branch: 'core'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
