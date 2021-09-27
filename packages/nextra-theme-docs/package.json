@@ -1,6 +1,6 @@
 {
   "name": "@acall-inc/nextra-theme-docs",
-  "version": "1.2.19",
+  "version": "1.2.20",
   "description": "A Nextra theme for ACALL's documentation sites.",
   "main": "index.js",
   "repository": "https://github.com/acall-inc/nextra.git",
