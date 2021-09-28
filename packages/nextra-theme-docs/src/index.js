@@ -10,7 +10,7 @@ import normalizePages from './utils/normalize-pages'
 
 import Head from './head'
 import Navbar from './navbar'
-import Footer, { NavLinks } from './footer'
+import { Footer, NavLinks } from './footer'
 import Theme from './misc/theme'
 import Sidebar from './sidebar'
 import ToC from './toc'

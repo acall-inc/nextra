@@ -103,7 +103,7 @@ export const NavLinks = ({ config, flatDirectories, currentIndex, isRTL }) => {
   )
 }
 
-const Footer = ({ config, filepathWithName, children }) => {
+export const Footer = ({ config, filepathWithName, children }) => {
   const { locale } = useRouter()
 
   return (
@@ -128,5 +128,3 @@ const Footer = ({ config, filepathWithName, children }) => {
     </footer>
   )
 }
-
-export default Footer
