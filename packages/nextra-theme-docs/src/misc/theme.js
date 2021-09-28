@@ -303,6 +303,7 @@ const getComponents = args => ({
 export default ({ children }) => {
   const slugger = new Slugger()
   slugger.index = 0
+  console.count('MDXProvider')
   return (
     <MDXProvider components={getComponents({ slugger })}>
       <div className="prose prose-sky dark:prose-dark">{children}</div>
