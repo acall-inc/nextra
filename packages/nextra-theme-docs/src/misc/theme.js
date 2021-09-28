@@ -212,7 +212,7 @@ const H6 = ({ slugger }) => ({ children, ...props }) => {
 }
 
 const A = ({ children, ...props }) => {
-  const isExternal = props.href && props.href.startsWith('https://')
+  const isExternal = props.href && props.href.startsWith('http')
   if (isExternal) {
     return (
       <a target="_blank" {...props}>
@@ -281,29 +281,19 @@ const Code = ({ children, className, highlight, ...props }) => {
   )
 }
 
-const Table = ({ children }) => {
-  return (
-    <div className="table-container">
-      <table>{children}</table>
-    </div>
-  )
-}
-
 const getComponents = args => ({
   h2: H2(args),
   h3: H3(args),
   h4: H4(args),
   h5: H5(args),
   h6: H6(args),
-  a: A,
-  code: Code,
-  table: Table
+  a: A
+  //code: Code,
 })
 
 export default ({ children }) => {
   const slugger = new Slugger()
   slugger.index = 0
-  console.count('MDXProvider')
   return (
     <MDXProvider components={getComponents({ slugger })}>
       <div className="prose prose-sky dark:prose-dark">{children}</div>
