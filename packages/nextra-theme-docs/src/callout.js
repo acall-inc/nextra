@@ -21,7 +21,7 @@ export default ({ children, type = 'default', emoji = '💡' }) => {
         {emoji}
       </div>
       <div className="py-2 pr-4">{children}</div>
-      <style jsx>{`
+      <style>{`
         .prose p {
           margin-top: 0;
           margin-bottom: 0;
